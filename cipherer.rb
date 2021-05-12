@@ -24,7 +24,7 @@ def caesar_cipher(input, shift)
     shifted_val = input_val + shift
 
     #check for if the shift made it go out of bounds and correct it
-    until in_range? do
+    until in_range?(shifted_val) do
       case
       when shifted_val > 122
         shifted_val -= 26
