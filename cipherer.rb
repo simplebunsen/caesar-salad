@@ -2,7 +2,9 @@ def caesar_cipher(input, shift)
 
   output = ""
 
-  input.each() do |character|
+  chars = input.split("")
+
+  chars.each() do |character|
 
     input_val = character.ord
 
