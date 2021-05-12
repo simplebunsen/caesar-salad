@@ -44,4 +44,14 @@ def in_range?(val)
   return (97..122) === val
 end
 
-puts caesar_cipher("Allahu AKBER and the !.? beat", 65)
+
+question = "What string do you want to caesarify? (type exit to quit)"
+
+puts question
+
+while (user_input_string = gets.chomp) != "exit"
+  puts "What is your desired shift?"
+  user_input_shift = gets.chomp.to_i
+  puts "Your string caesarified: \n\n#{caesar_cipher(user_input_string, user_input_shift)}\n\n"
+  puts question
+end
