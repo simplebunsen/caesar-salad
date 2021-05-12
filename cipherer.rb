@@ -33,8 +33,9 @@ def caesar_cipher(input, shift)
       end
     end
 
-    shifted_val = shifted_val.upcase if is_upcase
-    output.concat(shifted_val.chr)   
+    final_char = shifted_val.chr
+    final_char = final_char.upcase if is_upcase
+    output.concat(final_char)   
   end
   return output
 end
@@ -43,4 +44,4 @@ def in_range?(val)
   return (97..122) === val
 end
 
-puts caesar_cipher("abcde", 1)
+puts caesar_cipher("Allahu AKBER and the !.? beat", 65)
